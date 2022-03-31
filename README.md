@@ -2,7 +2,7 @@
 
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# UART I/O Expander: Client Implementation using PIC16F15276
+# UART I/O Expander using PIC16F15276 Microcontroller
 
 This code example demonstrates usage of PIC16F15276 microcontroller as a I/O expander in embedded applications, where the PIC16F15276 microcontroller provides additional I/O pins to the main microcontroller through serial communication interface like I2C or SPI or UART. In this code example, use of EUSART peripheral and GPIOs to realize UART I/O expander is demonstrated.
 
