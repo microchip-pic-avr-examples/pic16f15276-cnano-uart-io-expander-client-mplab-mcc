@@ -118,7 +118,7 @@ The following figure consists of populated PROTO Xplained Pro extension kit, Cur
   <br>Figure 4: Hardware Setup <br>
 </p>
 
-***Note: On the host hardware setup, timer pin and the switch pin need to be shorted. (Connect RC3 and RB5 using jumper)***
+***Note: In order to use on-board mechanical switch, timer is used to avoid the debouncing. Thereby, timer input pin RC3 and pin RB5 (on-board switch), need to be shorted using a jumper. The usage of jumper is required as RB5 pin cannot be selected as timer input through PPS feature of the PIC16F15276 microcontroller.***
 
 ## Operation
 
