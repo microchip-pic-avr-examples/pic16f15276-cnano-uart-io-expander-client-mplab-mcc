@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.mplabx.project.pic16f15276-cnano-uart-io-expander-client-mplab-mcc",
-        "version": " ",
+        "version": "1.0.0",
         "displayName": "UART I/O Expander using PIC16F15276 Microcontroller",
         "projectName": "pic16f15276-cnano-uart-io-expander-client-mplab-mcc",
         "shortDescription": "This example highlights usage of PIC MCU as I/O expander, where the PIC16F15276 MCU acts as client and used as an I/O expander by host, and communicates through UART interface. Compatible PIC16F152xx family of MCUs are: PIC16F15244, PIC16F15276.",
