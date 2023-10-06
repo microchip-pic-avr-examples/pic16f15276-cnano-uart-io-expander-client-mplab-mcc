@@ -12,7 +12,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -68,7 +68,6 @@
 #define IO_RB0_SetOpenDrain()       do { ODCONBbits.ODCB0 = 1; } while(0)
 #define IO_RB0_SetAnalogMode()      do { ANSELBbits.ANSB0 = 1; } while(0)
 #define IO_RB0_SetDigitalMode()     do { ANSELBbits.ANSB0 = 0; } while(0)
-
 // get/set IO_RB1 aliases
 #define IO_RB1_TRIS                 TRISBbits.TRISB1
 #define IO_RB1_LAT                  LATBbits.LATB1
@@ -88,7 +87,6 @@
 #define IO_RB1_SetOpenDrain()       do { ODCONBbits.ODCB1 = 1; } while(0)
 #define IO_RB1_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define IO_RB1_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
-
 // get/set IO_RC3 aliases
 #define IO_RC3_TRIS                 TRISCbits.TRISC3
 #define IO_RC3_LAT                  LATCbits.LATC3
@@ -108,7 +106,6 @@
 #define IO_RC3_SetOpenDrain()       do { ODCONCbits.ODCC3 = 1; } while(0)
 #define IO_RC3_SetAnalogMode()      do { ANSELCbits.ANSC3 = 1; } while(0)
 #define IO_RC3_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
-
 // get/set IO_RC4 aliases
 #define IO_RC4_TRIS                 TRISCbits.TRISC4
 #define IO_RC4_LAT                  LATCbits.LATC4
@@ -128,7 +125,6 @@
 #define IO_RC4_SetOpenDrain()       do { ODCONCbits.ODCC4 = 1; } while(0)
 #define IO_RC4_SetAnalogMode()      do { ANSELCbits.ANSC4 = 1; } while(0)
 #define IO_RC4_SetDigitalMode()     do { ANSELCbits.ANSC4 = 0; } while(0)
-
 // get/set IO_RC5 aliases
 #define IO_RC5_TRIS                 TRISCbits.TRISC5
 #define IO_RC5_LAT                  LATCbits.LATC5
@@ -148,7 +144,6 @@
 #define IO_RC5_SetOpenDrain()       do { ODCONCbits.ODCC5 = 1; } while(0)
 #define IO_RC5_SetAnalogMode()      do { ANSELCbits.ANSC5 = 1; } while(0)
 #define IO_RC5_SetDigitalMode()     do { ANSELCbits.ANSC5 = 0; } while(0)
-
 // get/set IO_RC6 aliases
 #define IO_RC6_TRIS                 TRISCbits.TRISC6
 #define IO_RC6_LAT                  LATCbits.LATC6
@@ -168,7 +163,6 @@
 #define IO_RC6_SetOpenDrain()       do { ODCONCbits.ODCC6 = 1; } while(0)
 #define IO_RC6_SetAnalogMode()      do { ANSELCbits.ANSC6 = 1; } while(0)
 #define IO_RC6_SetDigitalMode()     do { ANSELCbits.ANSC6 = 0; } while(0)
-
 // get/set IO_RD1 aliases
 #define IO_RD1_TRIS                 TRISDbits.TRISD1
 #define IO_RD1_LAT                  LATDbits.LATD1
@@ -188,7 +182,6 @@
 #define IO_RD1_SetOpenDrain()       do { ODCONDbits.ODCD1 = 1; } while(0)
 #define IO_RD1_SetAnalogMode()      do { ANSELDbits.ANSD1 = 1; } while(0)
 #define IO_RD1_SetDigitalMode()     do { ANSELDbits.ANSD1 = 0; } while(0)
-
 // get/set IO_RD2 aliases
 #define IO_RD2_TRIS                 TRISDbits.TRISD2
 #define IO_RD2_LAT                  LATDbits.LATD2
@@ -208,7 +201,6 @@
 #define IO_RD2_SetOpenDrain()       do { ODCONDbits.ODCD2 = 1; } while(0)
 #define IO_RD2_SetAnalogMode()      do { ANSELDbits.ANSD2 = 1; } while(0)
 #define IO_RD2_SetDigitalMode()     do { ANSELDbits.ANSD2 = 0; } while(0)
-
 // get/set IO_RD4 aliases
 #define IO_RD4_TRIS                 TRISDbits.TRISD4
 #define IO_RD4_LAT                  LATDbits.LATD4
@@ -228,7 +220,6 @@
 #define IO_RD4_SetOpenDrain()       do { ODCONDbits.ODCD4 = 1; } while(0)
 #define IO_RD4_SetAnalogMode()      do { ANSELDbits.ANSD4 = 1; } while(0)
 #define IO_RD4_SetDigitalMode()     do { ANSELDbits.ANSD4 = 0; } while(0)
-
 // get/set IO_RD5 aliases
 #define IO_RD5_TRIS                 TRISDbits.TRISD5
 #define IO_RD5_LAT                  LATDbits.LATD5
@@ -248,7 +239,6 @@
 #define IO_RD5_SetOpenDrain()       do { ODCONDbits.ODCD5 = 1; } while(0)
 #define IO_RD5_SetAnalogMode()      do { ANSELDbits.ANSD5 = 1; } while(0)
 #define IO_RD5_SetDigitalMode()     do { ANSELDbits.ANSD5 = 0; } while(0)
-
 // get/set IO_RE2 aliases
 #define LED_TRIS                 TRISEbits.TRISE2
 #define LED_LAT                  LATEbits.LATE2
@@ -268,7 +258,6 @@
 #define LED_SetOpenDrain()       do { ODCONEbits.ODCE2 = 1; } while(0)
 #define LED_SetAnalogMode()      do { ANSELEbits.ANSE2 = 1; } while(0)
 #define LED_SetDigitalMode()     do { ANSELEbits.ANSE2 = 0; } while(0)
-
 /**
  * @ingroup  pinsdriver
  * @brief GPIO and peripheral I/O initialization

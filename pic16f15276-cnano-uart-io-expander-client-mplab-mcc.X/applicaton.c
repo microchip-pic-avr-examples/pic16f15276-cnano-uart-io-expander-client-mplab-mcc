@@ -11,7 +11,8 @@ void Application(void)
 {      
     uint8_t sevenSegArrIndex;                          // 7 Segment Display Array Index variable
     uint8_t input_command;
-    
+           
+      
     if(EUSART1_IsRxReady() != ZERO)                         // Monitor the input on EUSART RX Pin 
     {
         input_command = EUSART1_Read();                // Read command received on UART

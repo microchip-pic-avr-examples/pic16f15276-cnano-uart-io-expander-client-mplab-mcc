@@ -10,7 +10,7 @@
  * @version EUSART1 Driver Version 3.0.0
 */
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -63,12 +63,13 @@
 
 #define EUSART1_TransmitEnable       EUSART1_TransmitEnable
 #define EUSART1_TransmitDisable      EUSART1_TransmitDisable
-#define EUSART1_AutoBaudSet          (NULL)
-#define EUSART1_AutoBaudQuery        (NULL)
-#define EUSART1_BRGSet               (NULL)
-#define EUSART1_BRGGet               (NULL)
-#define EUSART1_BaudSet              (NULL)
-#define EUSART1_BaudGet              (NULL)
+#define EUSART1_AutoBaudSet          EUSART1_AutoBaudSet
+#define EUSART1_AutoBaudQuery        EUSART1_AutoBaudQuery
+#define EUSART1_BRGCountSet                (NULL)
+#define EUSART1_BRGCountGet                (NULL)
+#define EUSART1_BaudRateSet                (NULL)
+#define EUSART1_BaudRateGet                (NULL)
+#define EUSART1__AutoBaudEventEnableGet    (NULL)
 #define EUSART1_ErrorGet             EUSART1_ErrorGet
 
 #define EUSART1_TxCompleteCallbackRegister     EUSART1_TxCompleteCallbackRegister
@@ -227,6 +228,38 @@ inline void EUSART1_SendBreakControlDisable(void);
 
 /**
  * @ingroup eusart1
+ * @brief This API enables the EUSART1 AutoBaud Detection.
+ * @param bool enable.
+ * @return None.
+ */
+inline void EUSART1_AutoBaudSet(bool enable);
+
+/**
+ * @ingroup eusart1
+ * @brief This API reads the EUSART1 AutoBaud Detection Complete bit.
+ * @param None.
+ * @return bool.
+ */
+inline bool EUSART1_AutoBaudQuery(void);
+
+/**
+ * @ingroup eusart1
+ * @brief This API reads the EUSART1 AutoBaud Detection overflow bit.
+ * @param None.
+ * @return None.
+ */
+inline bool EUSART1_IsAutoBaudDetectOverflow(void);
+
+/**
+ * @ingroup eusart1
+ * @brief This API Reset the EUSART1 AutoBaud Detection Overflow bit.
+ * @param None.
+ * @return None.
+ */
+inline void EUSART1_AutoBaudDetectOverflowReset(void);
+
+/**
+ * @ingroup eusart1
  * @brief This API checks if EUSART1 receiver has received data and ready to be read.
  * @param None.
  * @retval true if EUSART1 receiver FIFO has a data
@@ -315,6 +348,14 @@ void EUSART1_TxCompleteCallbackRegister(void (* callbackHandler)(void));
 
 /**
  * @ingroup eusart1
+ * @brief This function is a ISR function to be called upon Transmitter interrupt.
+ * @param void.
+ * @return None.
+ */
+void EUSART1_TransmitISR(void);
+
+/**
+ * @ingroup eusart1
  * @brief This is a pointer to the function that will be called upon receive interrupt.
  * @pre Initialize the EUSART1 module with receive interrupt enabled
  * @param None.
@@ -328,6 +369,14 @@ void (*EUSART1_RxInterruptHandler)(void);
  * @return None.
  */
 void EUSART1_RxCompleteCallbackRegister(void (* callbackHandler)(void));
+
+/**
+ * @ingroup eusart1
+ * @brief This function is ISR function to be called upon Receiver interrupt.
+ * @param void.
+ * @return None.
+ */
+void EUSART1_ReceiveISR(void);
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 
