@@ -42,7 +42,7 @@ Microchip’s free IDE, compiler and graphical code generators are used througho
 
 ## Description
 
-In this example, the host microcontroller expects to display the numbers on Seven Segment Display (SSD). To interface the SSD with the host device, seven I/O pins are required. To minimize the pins on the host, a secondary microcontroller is used as client. The device drives the SSD while the UART serial communication interface is used to establish the communicate between two devices.
+In this example, the host microcontroller expects to display the numbers on Seven Segment Display (SSD). To interface the SSD with the host device, seven I/O pins are required. To minimize the pins on the host, a secondary microcontroller is used as client. The device drives the SSD while the UART serial communication interface is used to establish the communicate between the two devices.
 
 For ease of demonstration, this code example uses two PIC16F15276 microcontrollers, one as a host and the other as a client and a PIC16F15276 Curiosity Nano Development board.
 
@@ -103,11 +103,11 @@ Resistor ( R ) = (V<sub>in</sub> – V<sub>f</sub> ) / ( I<sub>f</sub> ) = 140 o
 
 ## Application Firmware
 
-This example is supplemented with two standalone firmware named as host, client.
+This example is supplemented with two standalone firmware named host and client.
 
 When a valid switch press event is detected, the host sends a command to the client over the UART interface, which also blinks the on-board LED each time a command is successfully sent to the client.
 
-The client firmware is comprised of two sections. The first section is verifying the command received from the host through the UART interface. The second section consists of driving SSD, so the SSD start displaying digits from zero to nine in an incrementing order each time a valid command is received from the host. Additionally, the client firmware toggles on-board LED each time after a digit is displayed on the SSD and resets display value to zero when the cycle is completed.
+The client firmware is comprised of two sections. The first section is verifying the command received from the host through the UART interface. The second section consists of driving SSD, so the SSD starts displaying digits from zero to nine in an incrementing order each time a valid command is received from the host. Additionally, the client firmware toggles on-board LED each time after a digit is displayed on the SSD and resets display value to zero when the cycle is completed.
 
 ## Hardware Setup
 
